@@ -66,13 +66,12 @@ CREATE TABLE hitterStats(
  FOREIGN KEY (gameId) REFERENCES games(id),
  FOREIGN KEY (teamId) REFERENCES teams(id)
  );
- 
+
 CREATE TABLE pitcherStats(
  playerId INT,
  gameId INT,
  teamId INT,
- atBats INT,
- wins TINYINT, 
+ wins ENUM ('Y', 'N'), 
  inningsPitched DECIMAL(3, 1),
  runs INT,
  earnedRuns INT,
@@ -87,3 +86,6 @@ CREATE TABLE pitcherStats(
  FOREIGN KEY (gameId) REFERENCES games(id),
  FOREIGN KEY (teamId) REFERENCES teams(id)
  );
+ 
+ ALTER TABLE pitcherStats
+   DROP COLUMN atBats;

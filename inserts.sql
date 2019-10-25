@@ -1,5 +1,7 @@
+
 INSERT INTO teams
 (location, mascot, abbreviation, league, division)
+VALUES
 ("Pittsburgh","Pirates","PIT","NL","Central"),
 ("Texas","Rangers","TEX","AL","West"),
 ("Kansas City","Royals","KC","AL","Central"),
@@ -1997,3 +1999,2884 @@ INSERT INTO players
 VALUES
 ("Daniel","Vogelbach","1B","L","R",
 (SELECT id FROM teams WHERE abbreviation ='SEA'));
+
+INSERT INTO games
+(startTime, homeScore, awayScore, homeTeamId, awayTeamId)
+VALUES
+("2019-06-06 12:35:00","6","1",
+(SELECT id FROM teams WHERE abbreviation ='PIT'), (SELECT id FROM teams WHERE abbreviation = 'ATL'));
+
+INSERT INTO games
+(startTime, homeScore, awayScore, homeTeamId, awayTeamId)
+VALUES
+("2019-06-06 20:05:00","4","3",
+(SELECT id FROM teams WHERE abbreviation ='TEX'), (SELECT id FROM teams WHERE abbreviation = 'BAL'));
+
+INSERT INTO games
+(startTime, homeScore, awayScore, homeTeamId, awayTeamId)
+VALUES
+("2019-06-06 13:15:00","5","7",
+(SELECT id FROM teams WHERE abbreviation ='KC'), (SELECT id FROM teams WHERE abbreviation = 'BOS'));
+
+INSERT INTO games
+(startTime, homeScore, awayScore, homeTeamId, awayTeamId)
+VALUES
+("2019-06-06 14:20:00","1","3",
+(SELECT id FROM teams WHERE abbreviation ='CHC'), (SELECT id FROM teams WHERE abbreviation = 'COL'));
+
+INSERT INTO games
+(startTime, homeScore, awayScore, homeTeamId, awayTeamId)
+VALUES
+("2019-06-06 13:15:00","3","1",
+(SELECT id FROM teams WHERE abbreviation ='STL'), (SELECT id FROM teams WHERE abbreviation = 'CIN'));
+
+INSERT INTO games
+(startTime, homeScore, awayScore, homeTeamId, awayTeamId)
+VALUES
+("2019-06-06 19:00:00","4","5",
+(SELECT id FROM teams WHERE abbreviation ='CLE'), (SELECT id FROM teams WHERE abbreviation = 'MIN'));
+
+INSERT INTO games
+(startTime, homeScore, awayScore, homeTeamId, awayTeamId)
+VALUES
+("2019-06-06 13:10:00","1","6",
+(SELECT id FROM teams WHERE abbreviation ='DET'), (SELECT id FROM teams WHERE abbreviation = 'TB'));
+
+INSERT INTO games
+(startTime, homeScore, awayScore, homeTeamId, awayTeamId)
+VALUES
+("2019-06-06 15:40:00","7","8",
+(SELECT id FROM teams WHERE abbreviation ='SEA'), (SELECT id FROM teams WHERE abbreviation = 'HOU'));
+
+INSERT INTO games
+(startTime, homeScore, awayScore, homeTeamId, awayTeamId)
+VALUES
+("2019-06-06 22:07:00","4","7",
+(SELECT id FROM teams WHERE abbreviation ='LAA'), (SELECT id FROM teams WHERE abbreviation = 'OAK'));
+
+INSERT INTO games
+(startTime, homeScore, awayScore, homeTeamId, awayTeamId)
+VALUES
+("2019-06-06 14:10:00","5","1",
+(SELECT id FROM teams WHERE abbreviation ='MIL'), (SELECT id FROM teams WHERE abbreviation = 'MIA'));
+
+INSERT INTO games
+(startTime, homeScore, awayScore, homeTeamId, awayTeamId)
+VALUES
+("2019-06-06 12:10:00","7","3",
+(SELECT id FROM teams WHERE abbreviation ='NYM'), (SELECT id FROM teams WHERE abbreviation = 'SF'));
+
+INSERT INTO games
+(startTime, homeScore, awayScore, homeTeamId, awayTeamId)
+VALUES
+("2019-06-06 19:00:00","2","6",
+(SELECT id FROM teams WHERE abbreviation ='TOR'), (SELECT id FROM teams WHERE abbreviation = 'NYY'));
+
+INSERT INTO games
+(startTime, homeScore, awayScore, homeTeamId, awayTeamId)
+VALUES
+("2019-06-06 22:10:00","5","4",
+(SELECT id FROM teams WHERE abbreviation ='SD'), (SELECT id FROM teams WHERE abbreviation = 'WSH'));
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","2","3","3","0","0","2","0","0","0",
+(SELECT id FROM players WHERE lastName ='Bell'), (SELECT id FROM games WHERE id = '1'), (select id from teams where abbreviation ='PIT'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName ='Starling' AND lastName ='Marte'), 
+(SELECT id FROM games WHERE id = '1'), 
+(select id from teams where abbreviation ='PIT'));
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","1","1","0","0","1","2","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Colin' AND lastName ='Moran'), 
+(SELECT id FROM games WHERE id ='1'),
+(SELECT id from teams where abbreviation ='PIT'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Kevin' AND lastName ='Newman'), 
+(SELECT id FROM games WHERE id = '1'), 
+(select id from teams where abbreviation ='PIT'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","0","0","1","1","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Gregory' AND lastName ='Polanco'), 
+(SELECT id FROM games WHERE id = '1'), 
+(select id from teams where abbreviation ='PIT'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","2","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Bryan' AND lastName ='Reynolds'), 
+(SELECT id FROM games WHERE id = '1'), 
+(select id from teams where abbreviation ='PIT'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","0","0","0","0","0","0","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Jacob' AND lastName ='Stallings'), 
+(SELECT id FROM games WHERE id = '1'), 
+(select id from teams where abbreviation ='PIT'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","1","1","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Cole' AND lastName ='Tucker'), 
+(SELECT id FROM games WHERE id = '1'), 
+(select id from teams where abbreviation ='PIT'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Elvis' AND lastName ='Andrus'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='TEX'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","1","1","0","0","0","0","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Asdrubal' AND lastName ='Cabrera'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='TEX'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","1","1","0","0","0","0","1","0","1",
+(SELECT id FROM players WHERE firstName = 'Delino' AND lastName ='DeShields'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='TEX'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","2","1","0","0","1","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Ronald' AND lastName ='Guzman'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='TEX'));
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","1","1","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Isiah' AND lastName ='Kiner-Falefa'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='TEX'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Nomar' AND lastName ='Mazara'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='TEX'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Rougned' AND lastName ='Odor'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='TEX'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","0","0","1","1","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Hunter' AND lastName ='Pence'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='TEX'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","1","0","0","0","1","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Danny' AND lastName ='Santana'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='TEX'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","1","2","0","0","1","1","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Cheslor' AND lastName ='Cuthbert'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='KC'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","2","0","0","0","0","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Cam' AND lastName ='Gallagher'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='KC'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","2","3","0","0","1","1","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Alex' AND lastName ='Gordon'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='KC'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","2","1","0","0","1","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Billy' AND lastName ='Hamilton'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='KC'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","2","1","0","0","0","0","0","1",
+(SELECT id FROM players WHERE firstName = 'Nicky' AND lastName ='Lopez'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='KC'));
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","0","1","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Whit' AND lastName ='Merrifield'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='KC'));
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","0","0","0","0","0","0","0","3","0",
+(SELECT id FROM players WHERE firstName = 'Adalberto' AND lastName ='Mondesi'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='KC'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","0","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Ryan' AND lastName ="O'Hearn"), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='KC'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","1","2","1","0","1","2","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Jorge' AND lastName ='Soler'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='KC'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Nolan' AND lastName ='Arenado'), 
+(SELECT id FROM games WHERE id = '4'), 
+(select id from teams where abbreviation ='COL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","0","0","0","1","0","0","0",
+(SELECT id FROM players WHERE firstName = 'David' AND lastName ='Dahl'), 
+(SELECT id FROM games WHERE id = '4'), 
+(select id from teams where abbreviation ='COL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","2","2","0","0","1","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Ian' AND lastName ='Desmond'), 
+(SELECT id FROM games WHERE id = '4'), 
+(select id from teams where abbreviation ='COL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","0","0","0","0","0","1","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Chris' AND lastName ='Iannetta'), 
+(SELECT id FROM games WHERE id = '4'), 
+(select id from teams where abbreviation ='COL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","1","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Mark' AND lastName ='Reynolds'), 
+(SELECT id FROM games WHERE id = '4'), 
+(select id from teams where abbreviation ='COL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Brendan' AND lastName ='Rodgers'), 
+(SELECT id FROM games WHERE id = '4'), 
+(select id from teams where abbreviation ='COL'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","1","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Trevor' AND lastName ='Story'), 
+(SELECT id FROM games WHERE id = '4'), 
+(select id from teams where abbreviation ='COL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Raimel' AND lastName ='Tapia'), 
+(SELECT id FROM games WHERE id = '4'), 
+(select id from teams where abbreviation ='COL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","1","1","0","0","0","0","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Harrison' AND lastName ='Bader'), 
+(SELECT id FROM games WHERE id = '5'), 
+(select id from teams where abbreviation ='STL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","1","0","3","1",
+(SELECT id FROM players WHERE firstName = 'Matt' AND lastName ='Carpenter'), 
+(SELECT id FROM games WHERE id = '5'), 
+(select id from teams where abbreviation ='STL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","0","0","1","2","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Paul' AND lastName ='DeJong'), 
+(SELECT id FROM games WHERE id = '5'), 
+(select id from teams where abbreviation ='STL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","1","0","0","0","0","0","0","1",
+(SELECT id FROM players WHERE firstName = 'Dexter' AND lastName ='Fowler'), 
+(SELECT id FROM games WHERE id = '5'), 
+(select id from teams where abbreviation ='STL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Paul' AND lastName ='Goldschmidt'), 
+(SELECT id FROM games WHERE id = '5'), 
+(select id from teams where abbreviation ='STL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","2","0","0","0","0","0","1","1",
+(SELECT id FROM players WHERE firstName = 'Marcell' AND lastName ='Ozuna'), 
+(SELECT id FROM games WHERE id = '5'), 
+(select id from teams where abbreviation ='STL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Matt' AND lastName ='Wieters'), 
+(SELECT id FROM games WHERE id = '5'), 
+(select id from teams where abbreviation ='STL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","0","0","2","1",
+(SELECT id FROM players WHERE firstName = 'Kolten' AND lastName ='Wong'), 
+(SELECT id FROM games WHERE id = '5'), 
+(select id from teams where abbreviation ='STL'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Ehire' AND lastName ='Adrianza'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='MIN'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Willians' AND lastName ='Astudillo'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='MIN'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'C.J.' AND lastName ='Cron'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='MIN'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","0","1","1","0","0","1","0","4","0",
+(SELECT id FROM players WHERE firstName = 'Mitch' AND lastName ='Garver'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='MIN'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Marwin' AND lastName ='Gonzalez'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='MIN'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","3","4","0","0","3","4","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Max' AND lastName ='Kepler'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='MIN'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","1","1","0","0","0","0","0","1","1",
+(SELECT id FROM players WHERE firstName = 'Jorge' AND lastName ='Polanco'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='MIN'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Eddie' AND lastName ='Rosario'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='MIN'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Jonathan' AND lastName ='Schoop'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='MIN'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Albert' AND lastName ='Almora Jr.'), 
+(SELECT id FROM games WHERE id = '4'), 
+(select id from teams where abbreviation ='CHC'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","2","0","0","0","1","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Javier' AND lastName ='Baez'), 
+(SELECT id FROM games WHERE id = '4'), 
+(select id from teams where abbreviation ='CHC'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'David' AND lastName ='Bote'), 
+(SELECT id FROM games WHERE id = '4'), 
+(select id from teams where abbreviation ='CHC'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","1","1","1","0","0","0","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Kris' AND lastName ='Bryant'), 
+(SELECT id FROM games WHERE id = '4'), 
+(select id from teams where abbreviation ='CHC'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Willson' AND lastName ='Contreras'), 
+(SELECT id FROM games WHERE id = '4'), 
+(select id from teams where abbreviation ='CHC'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","0","0","0","0","0","0","1","2","0",
+(SELECT id FROM players WHERE firstName = 'Daniel' AND lastName ='Descalso'), 
+(SELECT id FROM games WHERE id = '4'), 
+(select id from teams where abbreviation ='CHC'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Anthony' AND lastName ='Rizzo'), 
+(SELECT id FROM games WHERE id = '4'), 
+(select id from teams where abbreviation ='CHC'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","0","0","2","1",
+(SELECT id FROM players WHERE firstName = 'Kyle' AND lastName ='Schwarber'), 
+(SELECT id FROM games WHERE id = '4'), 
+(select id from teams where abbreviation ='CHC'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","1","2","0","0","1","1","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Willy' AND lastName ='Adames'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='TB'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","1","0","0","0","0","0","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Christian' AND lastName ='Arroyo'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='TB'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","2","2","0","0","2","4","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Travis' AND lastName ="d'Arnaud"), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='TB'));
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","1","3","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Yandy' AND lastName ='Diaz'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='TB'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","0","2","1","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Avisail' AND lastName ='Garcia'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='TB'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","1","2","1","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Kevin' AND lastName ='Kiermaier'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='TB'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","0","1","0","0","0","1","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Austin' AND lastName ='Meadows'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='TB'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Tommy' AND lastName ='Pham'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='TB'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","2","1","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Daniel' AND lastName ='Robertson'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='TB'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","2","2","1","0","0","1","2","1","0",
+(SELECT id FROM players WHERE firstName = 'Edwin' AND lastName ='Encarnacion'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='SEA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Mitch' AND lastName ='Haniger'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='SEA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("7","1","0","0","0","0","1","0","4","0",
+(SELECT id FROM players WHERE firstName = 'Shed' AND lastName ='Long'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='SEA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","1","2","0","0","0","1","1","1","1",
+(SELECT id FROM players WHERE firstName = 'Dylan' AND lastName ='Moore'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='SEA'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("6","1","2","0","0","1","1","1","2","0",
+(SELECT id FROM players WHERE firstName = 'Omar' AND lastName ='Narvaez'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='SEA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("6","1","2","0","0","0","1","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Domingo' AND lastName ='Santana'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='SEA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("7","0","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Kyle' AND lastName ='Seager'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='SEA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("6","0","1","0","0","0","1","1","1","1",
+(SELECT id FROM players WHERE firstName = 'Mallex' AND lastName ='Smith'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='SEA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","1","2","0","0","0","1","2","1","0",
+(SELECT id FROM players WHERE firstName = 'Daniel' AND lastName ='Vogelbach'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='SEA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","1","1","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Andrew' AND lastName ='Benintendi'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='BOS'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","1","1","0","0","1","2","2","0","0",
+(SELECT id FROM players WHERE firstName = 'Mookie' AND lastName ='Betts'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='BOS'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","0","0","0","0","1","1","1",
+(SELECT id FROM players WHERE firstName = 'Xander' AND lastName ='Bogaerts'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='BOS'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","1","0","0","0","0","0","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Jackie' AND lastName ='Bradley Jr.'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='BOS'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","3","0",
+(SELECT id FROM players WHERE firstName = 'Michael' AND lastName ='Chavis'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='BOS'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","1","1","0","0","0","2","2","0","0",
+(SELECT id FROM players WHERE firstName = 'Rafael' AND lastName ='Devers'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='BOS'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","1","1","1","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'J.D.' AND lastName ='Martinez'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='BOS'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","3","0","0","0","0","0","0","1",
+(SELECT id FROM players WHERE firstName = 'Eduardo' AND lastName ='Nunez'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='BOS'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","0","1","0","2","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Christian' AND lastName ='Vazquez'), 
+(SELECT id FROM games WHERE id = '3'), 
+(select id from teams where abbreviation ='BOS'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("1","1","1","0","0","0","0","3","0","0",
+(SELECT id FROM players WHERE firstName = 'Mark' AND lastName ='Canha'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='OAK'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","0","0","0","0","0","1","2","0",
+(SELECT id FROM players WHERE firstName = 'Matt' AND lastName ='Chapman'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='OAK'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","1","2","0","0","0","1","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Khris' AND lastName ='Davis'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='OAK'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","0","0","0","2","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Ramon' AND lastName ='Laureano'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='OAK'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","1","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Josh' AND lastName ='Phegley'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='OAK'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","0","0","0","0","0","1","2","0",
+(SELECT id FROM players WHERE firstName = 'Chad' AND lastName ='Pinder'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='OAK'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","2","2","0","0","1","1","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Stephen' AND lastName ='Piscotty'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='OAK'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","1","0","0","0","1","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Jurickson' AND lastName ='Profar'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='OAK'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","0","1","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Marcus' AND lastName ='Semien'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='OAK'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Jesus' AND lastName ='Aguilar'), 
+(SELECT id FROM games WHERE id = '10'), 
+(select id from teams where abbreviation ='MIL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Orlando' AND lastName ='Arcia'), 
+(SELECT id FROM games WHERE id = '10'), 
+(select id from teams where abbreviation ='MIL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","1","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Ryan' AND lastName ='Braun'), 
+(SELECT id FROM games WHERE id = '10'), 
+(select id from teams where abbreviation ='MIL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","2","2","0","0","0","0","1","0","1",
+(SELECT id FROM players WHERE firstName = 'Lorenzo' AND lastName ='Cain'), 
+(SELECT id FROM games WHERE id = '10'), 
+(select id from teams where abbreviation ='MIL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","2","2","0","0","2","2","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Mike' AND lastName ='Moustakas'), 
+(SELECT id FROM games WHERE id = '10'), 
+(select id from teams where abbreviation ='MIL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Hernan' AND lastName ='Perez'), 
+(SELECT id FROM games WHERE id = '10'), 
+(select id from teams where abbreviation ='MIL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","0","0","0","0","0","0","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Manny' AND lastName ='Pina'), 
+(SELECT id FROM games WHERE id = '10'), 
+(select id from teams where abbreviation ='MIL'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","3","0","0","1","2","0","1","1",
+(SELECT id FROM players WHERE firstName = 'Christian' AND lastName ='Yelich'), 
+(SELECT id FROM games WHERE id = '10'), 
+(select id from teams where abbreviation ='MIL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Jorge' AND lastName ='Alfaro'), 
+(SELECT id FROM games WHERE id = '10'), 
+(select id from teams where abbreviation ='MIA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Brian' AND lastName ='Anderson'), 
+(SELECT id FROM games WHERE id = '10'), 
+(select id from teams where abbreviation ='MIA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Starlin' AND lastName ='Castro'), 
+(SELECT id FROM games WHERE id = '10'), 
+(select id from teams where abbreviation ='MIA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","1","0","0","0","1","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Garrett' AND lastName ='Cooper'), 
+(SELECT id FROM games WHERE id = '10'), 
+(select id from teams where abbreviation ='MIA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","1","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Austin' AND lastName ='Dean'), 
+(SELECT id FROM games WHERE id = '10'), 
+(select id from teams where abbreviation ='MIA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","3","0",
+(SELECT id FROM players WHERE firstName = 'Harold' AND lastName ='Ramirez'), 
+(SELECT id FROM games WHERE id = '10'), 
+(select id from teams where abbreviation ='MIA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","1","1","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'JT' AND lastName ='Riddle'), 
+(SELECT id FROM games WHERE id = '10'), 
+(select id from teams where abbreviation ='MIA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","3","0",
+(SELECT id FROM players WHERE firstName = 'Miguel' AND lastName ='Rojas'), 
+(SELECT id FROM games WHERE id = '10'), 
+(select id from teams where abbreviation ='MIA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","4","0",
+(SELECT id FROM players WHERE firstName = 'Jake' AND lastName ='Bauers'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='CLE'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Jason' AND lastName ='Kipnis'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='CLE'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Francisco' AND lastName ='Lindor'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='CLE'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","1","0","0","0","0","0","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Jordan' AND lastName ='Luplow'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='CLE'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Leonys' AND lastName ='Martin'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='CLE'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","1","0","0","0","1","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Tyler' AND lastName ='Naquin'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='CLE'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","1","1","0","0","1","2","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Roberto' AND lastName ='Perez'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='CLE'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","0","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Jose' AND lastName ='Ramirez'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='CLE'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","1","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Carlos' AND lastName ='Santana'), 
+(SELECT id FROM games WHERE id = '6'), 
+(select id from teams where abbreviation ='CLE'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","0","0","1","2","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Brandon' AND lastName ='Belt'), 
+(SELECT id FROM games WHERE id = '11'), 
+(select id from teams where abbreviation ='SF'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","0","0","0","0","0","0","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Brandon' AND lastName ='Crawford'), 
+(SELECT id FROM games WHERE id = '11'), 
+(select id from teams where abbreviation ='SF'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Steven' AND lastName ='Duggar'), 
+(SELECT id FROM games WHERE id = '11'), 
+(select id from teams where abbreviation ='SF'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Joe' AND lastName ='Panik'), 
+(SELECT id FROM games WHERE id = '11'), 
+(select id from teams where abbreviation ='SF'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Kevin' AND lastName ='Pillar'), 
+(SELECT id FROM games WHERE id = '11'), 
+(select id from teams where abbreviation ='SF'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","2","1","0","0","1","1","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Pablo' AND lastName ='Sandoval'), 
+(SELECT id FROM games WHERE id = '11'), 
+(select id from teams where abbreviation ='SF'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Stephen' AND lastName ='Vogt'), 
+(SELECT id FROM games WHERE id = '11'), 
+(select id from teams where abbreviation ='SF'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Mike' AND lastName ='Yastrzemski'), 
+(SELECT id FROM games WHERE id = '11'), 
+(select id from teams where abbreviation ='SF'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","1","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Brandon' AND lastName ='Drury'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='TOR'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Freddy' AND lastName ='Galvis'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='TOR'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","2","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Randal' AND lastName ='Grichuk'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='TOR'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Vladimir' AND lastName ='Guerrero Jr.'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='TOR'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Lourdes' AND lastName ='Gurriel Jr.'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='TOR'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Teoscar' AND lastName ='Hernandez'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='TOR'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","1","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Luke' AND lastName ='Maile'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='TOR'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Justin' AND lastName ='Smoak'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='TOR'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","2","1","0","1","1","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Eric' AND lastName ='Sogard'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='TOR'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","2","0","0","0","0","0","0","1",
+(SELECT id FROM players WHERE firstName = 'Kole' AND lastName ='Calhoun'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='LAA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'David' AND lastName ='Fletcher'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='LAA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Dustin' AND lastName ='Garneau'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='LAA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","0","0","0","0","0","1","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Brian' AND lastName ='Goodwin'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='LAA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","1","2","0","0","0","1","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Tommy' AND lastName ='La Stella'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='LAA'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Shohei' AND lastName ='Ohtani'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='LAA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","1","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Luis' AND lastName ='Rengifo'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='LAA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","0","0","1","2","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Mike' AND lastName ='Trout'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='LAA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","1","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Jared' AND lastName ='Walsh'), 
+(SELECT id FROM games WHERE id = '9'), 
+(select id from teams where abbreviation ='LAA'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","0","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Ronald' AND lastName ='Acuna Jr.'), 
+(SELECT id FROM games WHERE id = '1'), 
+(select id from teams where abbreviation ='ATL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","1","0","0","0","0","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Ozzie' AND lastName ='Albies'), 
+(SELECT id FROM games WHERE id = '1'), 
+(select id from teams where abbreviation ='ATL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","1","1",
+(SELECT id FROM players WHERE firstName = 'Josh' AND lastName ='Donaldson'), 
+(SELECT id FROM games WHERE id = '1'), 
+(select id from teams where abbreviation ='ATL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","1","1","0","0","1","1","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Freddie' AND lastName ='Freeman'), 
+(SELECT id FROM games WHERE id = '1'), 
+(select id from teams where abbreviation ='ATL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Nick' AND lastName ='Markakis'), 
+(SELECT id FROM games WHERE id = '1'), 
+(select id from teams where abbreviation ='ATL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","2","1","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Brian' AND lastName ='McCann'), 
+(SELECT id FROM games WHERE id = '1'), 
+(select id from teams where abbreviation ='ATL'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","2","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Austin' AND lastName ='Riley'), 
+(SELECT id FROM games WHERE id = '1'), 
+(select id from teams where abbreviation ='ATL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Dansby' AND lastName ='Swanson'), 
+(SELECT id FROM games WHERE id = '1'), 
+(select id from teams where abbreviation ='ATL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","2","1","0","1","2","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Brian' AND lastName ='Dozier'), 
+(SELECT id FROM games WHERE id = '13'), 
+(select id from teams where abbreviation ='WSH'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Yan' AND lastName ='Gomes'), 
+(SELECT id FROM games WHERE id = '13'), 
+(select id from teams where abbreviation ='WSH'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","0","0","0","2","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Howie' AND lastName ='Kendrick'), 
+(SELECT id FROM games WHERE id = '13'), 
+(select id from teams where abbreviation ='WSH'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Anthony' AND lastName ='Rendon'), 
+(SELECT id FROM games WHERE id = '13'), 
+(select id from teams where abbreviation ='WSH'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","1","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Victor' AND lastName ='Robles'), 
+(SELECT id FROM games WHERE id = '13'), 
+(select id from teams where abbreviation ='WSH'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","1","0","0","0","0","0","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Juan' AND lastName ='Soto'), 
+(SELECT id FROM games WHERE id = '13'), 
+(select id from teams where abbreviation ='WSH'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Michael' AND lastName ='Taylor'), 
+(SELECT id FROM games WHERE id = '13'), 
+(select id from teams where abbreviation ='WSH'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","1","2","0",
+(SELECT id FROM players WHERE firstName = 'Trea' AND lastName ='Turner'), 
+(SELECT id FROM games WHERE id = '13'), 
+(select id from teams where abbreviation ='WSH'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","0","1","1","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Michael' AND lastName ='Brantley'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='HOU'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("6","1","3","0","0","1","1","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Alex' AND lastName ='Bregman'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='HOU'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","3","1","0","0","1","2","4","2","0",
+(SELECT id FROM players WHERE firstName = 'Robinson' AND lastName ='Chirinos'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='HOU'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("6","1","2","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Derek' AND lastName ='Fisher'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='HOU'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("6","1","1","0","0","0","2","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Yuli' AND lastName ='Gurriel'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='HOU'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","1","0","0","1","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Tony' AND lastName ='Kemp'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='HOU'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","0","0","0","0","0","0","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Jake' AND lastName ='Marisnick'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='HOU'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","0","0","1","1","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Jack' AND lastName ='Mayfield'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='HOU'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("6","0","3","0","0","0","0","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Tyler' AND lastName ='White'), 
+(SELECT id FROM games WHERE id = '8'), 
+(select id from teams where abbreviation ='HOU'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","0","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Pete' AND lastName ='Alonso'), 
+(SELECT id FROM games WHERE id = '11'), 
+(select id from teams where abbreviation ='NYM'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","1","1","0","0","0","0","1","0","1",
+(SELECT id FROM players WHERE firstName = 'Michael' AND lastName ='Conforto'), 
+(SELECT id FROM games WHERE id = '11'), 
+(select id from teams where abbreviation ='NYM'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","0","0","1","2","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Todd' AND lastName ='Frazier'), 
+(SELECT id FROM games WHERE id = '11'), 
+(select id from teams where abbreviation ='NYM'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","2","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Adeiny' AND lastName ='Hechavarria'), 
+(SELECT id FROM games WHERE id = '11'), 
+(select id from teams where abbreviation ='NYM'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","2","2","1","0","0","1","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Juan' AND lastName ='Lagares'), 
+(SELECT id FROM games WHERE id = '11'), 
+(select id from teams where abbreviation ='NYM'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Tomas' AND lastName ='Nido'), 
+(SELECT id FROM games WHERE id = '11'), 
+(select id from teams where abbreviation ='NYM'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","1","1","0","0","1","1","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Amed' AND lastName ='Rosario'), 
+(SELECT id FROM games WHERE id = '11'), 
+(select id from teams where abbreviation ='NYM'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","1","2","0","0","1","1","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Dominic' AND lastName ='Smith'), 
+(SELECT id FROM games WHERE id = '11'), 
+(select id from teams where abbreviation ='NYM'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","1","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Tucker' AND lastName ='Barnhart'), 
+(SELECT id FROM games WHERE id = '5'), 
+(select id from teams where abbreviation ='CIN'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Derek' AND lastName ='Dietrich'), 
+(SELECT id FROM games WHERE id = '5'), 
+(select id from teams where abbreviation ='CIN'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Jose' AND lastName ='Iglesias'), 
+(SELECT id FROM games WHERE id = '5'), 
+(select id from teams where abbreviation ='CIN'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","1","0","0","0","0","1","1",
+(SELECT id FROM players WHERE firstName = 'Yasiel' AND lastName ='Puig'), 
+(SELECT id FROM games WHERE id = '5'), 
+(select id from teams where abbreviation ='CIN'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","1","1","0","0","0","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Nick' AND lastName ='Senzel'), 
+(SELECT id FROM games WHERE id = '5'), 
+(select id from teams where abbreviation ='CIN'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Eugenio' AND lastName ='Suarez'), 
+(SELECT id FROM games WHERE id = '5'), 
+(select id from teams where abbreviation ='CIN'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Joey' AND lastName ='Votto'), 
+(SELECT id FROM games WHERE id = '5'), 
+(select id from teams where abbreviation ='CIN'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","1","1","0","0","0","0","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Jesse' AND lastName ='Winker'), 
+(SELECT id FROM games WHERE id = '5'), 
+(select id from teams where abbreviation ='CIN'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Gordon' AND lastName ='Beckham'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='DET'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","1","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Nicholas' AND lastName ='Castellanos'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='DET'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","2","0","0","0","1","0","1","1",
+(SELECT id FROM players WHERE firstName = 'Brandon' AND lastName ='Dixon'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='DET'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Niko' AND lastName ='Goodrum'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='DET'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Grayson' AND lastName ='Greiner'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='DET'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","0","1","0","0","0","0","1","0","1",
+(SELECT id FROM players WHERE firstName = 'JaCoby' AND lastName ='Jones'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='DET'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Dawel' AND lastName ='Lugo'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='DET'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Ronny' AND lastName ='Rodriguez'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='DET'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","2","1","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Christin' AND lastName ='Stewart'), 
+(SELECT id FROM games WHERE id = '7'), 
+(select id from teams where abbreviation ='DET'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","2","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Hanser' AND lastName ='Alberto'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='BAL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","1","0","0","1","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Chris' AND lastName ='Davis'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='BAL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","3","0","0","1","1","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Trey' AND lastName ='Mancini'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='BAL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Richie' AND lastName ='Martin'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='BAL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Renato' AND lastName ='Nunez'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='BAL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","3","0",
+(SELECT id FROM players WHERE firstName = 'Rio' AND lastName ='Ruiz'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='BAL'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","1","1","1","0","0","0","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Chance' AND lastName ='Sisco'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='BAL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","0","0","0","0","0","0","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Dwight' AND lastName ='Smith Jr.'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='BAL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","1","0","0","0","1","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Stevie' AND lastName ='Wilkerson'), 
+(SELECT id FROM games WHERE id = '2'), 
+(select id from teams where abbreviation ='BAL'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","0","0","0","0","0","0","2","0",
+(SELECT id FROM players WHERE firstName = 'Thairo' AND lastName ='Estrada'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='NYY'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Clint' AND lastName ='Frazier'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='NYY'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","1","2","0","0","1","3","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Aaron' AND lastName ='Hicks'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='NYY'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","3","2","0","0","2","1","0","0",
+(SELECT id FROM players WHERE firstName = 'DJ' AND lastName ='LeMahieu'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='NYY'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","2","2","1","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Cameron' AND lastName ='Maybin'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='NYY'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Kendrys' AND lastName ='Morales'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='NYY'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("5","0","0","0","0","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Gary' AND lastName ='Sanchez'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='NYY'));
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","1","1","0","0","1","1","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Gio' AND lastName ='Urshela'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='NYY'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","0","0","0","0","0","0","2","0","0",
+(SELECT id FROM players WHERE firstName = 'Luke' AND lastName ='Voit'), 
+(SELECT id FROM games WHERE id = '12'), 
+(select id from teams where abbreviation ='NYY'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","0","0","3","0",
+(SELECT id FROM players WHERE firstName = 'Austin' AND lastName ='Hedges'), 
+(SELECT id FROM games WHERE id = '13'), 
+(select id from teams where abbreviation ='SD'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","2","0","0","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = 'Ian' AND lastName ='Kinsler'), 
+(SELECT id FROM games WHERE id = '13'), 
+(select id from teams where abbreviation ='SD'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("4","0","0","0","0","0","1","0","1","0",
+(SELECT id FROM players WHERE firstName = 'Manny' AND lastName ='Machado'), 
+(SELECT id FROM games WHERE id = '13'), 
+(select id from teams where abbreviation ='SD'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","1","2","0","0","0","0","1","0","0",
+(SELECT id FROM players WHERE firstName = 'Manuel' AND lastName ='Margot'), 
+(SELECT id FROM games WHERE id = '13'), 
+(select id from teams where abbreviation ='SD'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","1","0","0","0","0","0","2","1","0",
+(SELECT id FROM players WHERE firstName = 'Wil' AND lastName ='Myers'), 
+(SELECT id FROM games WHERE id = '13'), 
+(select id from teams where abbreviation ='SD'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("3","1","1","0","0","1","2","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Hunter' AND lastName ='Renfroe'), 
+(SELECT id FROM games WHERE id = '13'), 
+(select id from teams where abbreviation ='SD'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","1","0","0","0","0","1","1","1","0",
+(SELECT id FROM players WHERE firstName = 'Franmil' AND lastName ='Reyes'), 
+(SELECT id FROM games WHERE id = '13'), 
+(select id from teams where abbreviation ='SD'));
+
+
+INSERT INTO hitterStats
+(atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
+VALUES
+("2","1","1","0","0","0","0","2","0","0",
+(SELECT id FROM players WHERE firstName = 'Fernando' AND lastName ='Tatis Jr.'), 
+(SELECT id FROM games WHERE id = '13'), 
+(select id from teams where abbreviation ='SD'));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","6","6","1","1","2","6",
+(SELECT id FROM players WHERE firstName = 'Chris' AND lastName ='Archer'), 
+(SELECT id FROM games WHERE id = '1'), 
+(select id from teams where abbreviation ='PIT'));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1.2","0","0","0","0","1",
+(SELECT id FROM players WHERE firstName = "Francisco" AND lastName ="Liriano"), 
+(SELECT id FROM games WHERE id = "1"), 
+(select id from teams where abbreviation ="PIT"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1.1","1","0","0","2","1",
+(SELECT id FROM players WHERE firstName = "Felipe" AND lastName ="Vazquez"), 
+(SELECT id FROM games WHERE id = "1"), 
+(select id from teams where abbreviation ="PIT"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","0","0","0","0","1",
+(SELECT id FROM players WHERE firstName = "Jesse" AND lastName ="Chavez"), 
+(SELECT id FROM games WHERE id = "2"), 
+(select id from teams where abbreviation ="TEX"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","6","8","3","3","1","6",
+(SELECT id FROM players WHERE firstName = "Ariel" AND lastName ="Jurado"), 
+(SELECT id FROM games WHERE id = "2"), 
+(select id from teams where abbreviation ="TEX"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","0","0","0","1","1",
+(SELECT id FROM players WHERE firstName = "Shawn" AND lastName ="Kelley"), 
+(SELECT id FROM games WHERE id = "2"), 
+(select id from teams where abbreviation ="TEX"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","0","0","0","0","3",
+(SELECT id FROM players WHERE firstName = "Chris" AND lastName ="Martin"), 
+(SELECT id FROM games WHERE id = "2"), 
+(select id from teams where abbreviation ="TEX"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1.1","1","3","3","2","3",
+(SELECT id FROM players WHERE firstName = "Scott" AND lastName ="Barlow"), 
+(SELECT id FROM games WHERE id = "3"), 
+(select id from teams where abbreviation ="KC"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","2.1","4","4","4","2","2",
+(SELECT id FROM players WHERE firstName = "Danny" AND lastName ="Duffy"), 
+(SELECT id FROM games WHERE id = "3"), 
+(select id from teams where abbreviation ="KC"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","3.1","3","0","0","2","3",
+(SELECT id FROM players WHERE firstName = "Brian" AND lastName ="Flynn"), 
+(SELECT id FROM games WHERE id = "3"), 
+(select id from teams where abbreviation ="KC"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","2","1","0","0","0","0",
+(SELECT id FROM players WHERE firstName = "Kevin" AND lastName ="McCarthy"), 
+(SELECT id FROM games WHERE id = "3"), 
+(select id from teams where abbreviation ="KC"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","1","0","0","1","2",
+(SELECT id FROM players WHERE firstName = "Jairo" AND lastName ="Diaz"), 
+(SELECT id FROM games WHERE id = "4"), 
+(select id from teams where abbreviation ="COL"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","7","4","1","1","1","9",
+(SELECT id FROM players WHERE firstName = "Peter" AND lastName ="Lambert"), 
+(SELECT id FROM games WHERE id = "4"), 
+(select id from teams where abbreviation ="COL"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","0","0","0","0","1",
+(SELECT id FROM players WHERE firstName = "Scott" AND lastName ="Oberg"), 
+(SELECT id FROM games WHERE id = "4"), 
+(select id from teams where abbreviation ="COL"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1.1","0","0","0","0","1",
+(SELECT id FROM players WHERE firstName = "John" AND lastName ="Gant"), 
+(SELECT id FROM games WHERE id = "5"), 
+(select id from teams where abbreviation ="STL"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","0","0","0","0","1",
+(SELECT id FROM players WHERE firstName = "Jordan" AND lastName ="Hicks"), 
+(SELECT id FROM games WHERE id = "5"), 
+(select id from teams where abbreviation ="STL"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","6.1","5","1","1","4","3",
+(SELECT id FROM players WHERE firstName = "Dakota" AND lastName ="Hudson"), 
+(SELECT id FROM games WHERE id = "5"), 
+(select id from teams where abbreviation ="STL"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","0.1","0","0","0","0","1",
+(SELECT id FROM players WHERE firstName = "Andrew" AND lastName ="Miller"), 
+(SELECT id FROM games WHERE id = "5"), 
+(select id from teams where abbreviation ="STL"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","6","2","2","1","1","6",
+(SELECT id FROM players WHERE firstName = "Jose" AND lastName ="Berrios"), 
+(SELECT id FROM games WHERE id = "6"), 
+(select id from teams where abbreviation ="MIN"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","0","1","1","1","1","0",
+(SELECT id FROM players WHERE firstName = "Matt" AND lastName ="Magill"), 
+(SELECT id FROM games WHERE id = "6"), 
+(select id from teams where abbreviation ="MIN"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = "Trevor" AND lastName ="May"), 
+(SELECT id FROM games WHERE id = "6"), 
+(select id from teams where abbreviation ="MIN"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","2","1","1","1","0","3",
+(SELECT id FROM players WHERE firstName = "Taylor" AND lastName ="Rogers"), 
+(SELECT id FROM games WHERE id = "6"), 
+(select id from teams where abbreviation ="MIN"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","0.2","0","0","0","0","1",
+(SELECT id FROM players WHERE firstName = "Carl" AND lastName ="Edwards Jr."), 
+(SELECT id FROM games WHERE id = "4"), 
+(select id from teams where abbreviation ="CHC"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","7.1","6","3","3","0","4",
+(SELECT id FROM players WHERE firstName = "Jose" AND lastName ="Quintana"), 
+(SELECT id FROM games WHERE id = "4"), 
+(select id from teams where abbreviation ="CHC"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1","0","0","0","1","2",
+(SELECT id FROM players WHERE firstName = "Kyle" AND lastName ="Ryan"), 
+(SELECT id FROM games WHERE id = "4"), 
+(select id from teams where abbreviation ="CHC"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","4.1","4","0","0","0","2",
+(SELECT id FROM players WHERE firstName = "Jalen" AND lastName ="Beeks"), 
+(SELECT id FROM games WHERE id = "7"), 
+(select id from teams where abbreviation ="TB"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","0.1","1","0","0","0","0",
+(SELECT id FROM players WHERE firstName = "Diego" AND lastName ="Castillo"), 
+(SELECT id FROM games WHERE id = "7"), 
+(select id from teams where abbreviation ="TB"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","0","0","0","2","2",
+(SELECT id FROM players WHERE firstName = "Chaz" AND lastName ="Roe"), 
+(SELECT id FROM games WHERE id = "7"), 
+(select id from teams where abbreviation ="TB"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","2","2","1","1","0","2",
+(SELECT id FROM players WHERE firstName = "Ryne" AND lastName ="Stanek"), 
+(SELECT id FROM games WHERE id = "7"), 
+(select id from teams where abbreviation ="TB"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1.1","1","0","0","0","1",
+(SELECT id FROM players WHERE firstName = "Hunter" AND lastName ="Wood"), 
+(SELECT id FROM games WHERE id = "7"), 
+(select id from teams where abbreviation ="TB"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","0.2","3","3","3","2","0",
+(SELECT id FROM players WHERE firstName = "Austin" AND lastName ="Adams" AND currentTeamId ="9"), 
+(SELECT id FROM games WHERE id = "8"), 
+(select id from teams where abbreviation ="SEA"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","2","2","1","1","2","1",
+(SELECT id FROM players WHERE firstName = "Anthony" AND lastName ="Bass"), 
+(SELECT id FROM games WHERE id = "8"), 
+(select id from teams where abbreviation ="SEA"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1","1","1","1","2","0",
+(SELECT id FROM players WHERE firstName = "Gerson" AND lastName ="Bautista"), 
+(SELECT id FROM games WHERE id = "8"), 
+(select id from teams where abbreviation ="SEA"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1","1","0","0","0","2",
+(SELECT id FROM players WHERE firstName = "Brandon" AND lastName ="Brennan"), 
+(SELECT id FROM games WHERE id = "8"), 
+(select id from teams where abbreviation ="SEA"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1","2","1","1","0","1",
+(SELECT id FROM players WHERE firstName = "Roenis" AND lastName ="Elias"), 
+(SELECT id FROM games WHERE id = "8"), 
+(select id from teams where abbreviation ="SEA"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1","1","1","1","1","2",
+(SELECT id FROM players WHERE firstName = "Matt" AND lastName ="Festa"), 
+(SELECT id FROM games WHERE id = "8"), 
+(select id from teams where abbreviation ="SEA"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","2","1","0","0","0","1",
+(SELECT id FROM players WHERE firstName = "Cory" AND lastName ="Gearrin"), 
+(SELECT id FROM games WHERE id = "8"), 
+(select id from teams where abbreviation ="SEA"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","5.1","3","1","1","1","1",
+(SELECT id FROM players WHERE firstName = "Tommy" AND lastName ="Milone"), 
+(SELECT id FROM games WHERE id = "8"), 
+(select id from teams where abbreviation ="SEA"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","2","1","1","0","2",
+(SELECT id FROM players WHERE firstName = "Matt" AND lastName ="Barnes"), 
+(SELECT id FROM games WHERE id = "3"), 
+(select id from teams where abbreviation ="BOS"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","2","0","0","0","2",
+(SELECT id FROM players WHERE firstName = "Ryan" AND lastName ="Brasier"), 
+(SELECT id FROM games WHERE id = "3"), 
+(select id from teams where abbreviation ="BOS"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","2","2","0","0","1","2",
+(SELECT id FROM players WHERE firstName = "Colten" AND lastName ="Brewer"), 
+(SELECT id FROM games WHERE id = "3"), 
+(select id from teams where abbreviation ="BOS"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","0","0","0","0","1",
+(SELECT id FROM players WHERE firstName = "Heath" AND lastName ="Hembree"), 
+(SELECT id FROM games WHERE id = "3"), 
+(select id from teams where abbreviation ="BOS"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","2","1","1","0","1",
+(SELECT id FROM players WHERE firstName = "Josh" AND lastName ="Taylor"), 
+(SELECT id FROM games WHERE id = "3"), 
+(select id from teams where abbreviation ="BOS"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1.2","1","1","1","0","2",
+(SELECT id FROM players WHERE firstName = "Marcus" AND lastName ="Walden"), 
+(SELECT id FROM games WHERE id = "3"), 
+(select id from teams where abbreviation ="BOS"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1.1","5","2","2","0","1",
+(SELECT id FROM players WHERE firstName = "Ryan" AND lastName ="Weber"), 
+(SELECT id FROM games WHERE id = "3"), 
+(select id from teams where abbreviation ="BOS"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","0.2","1","0","0","0","0",
+(SELECT id FROM players WHERE firstName = "Ryan" AND lastName ="Buchter"), 
+(SELECT id FROM games WHERE id = "9"), 
+(select id from teams where abbreviation ="OAK"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","6","7","3","3","0","5",
+(SELECT id FROM players WHERE firstName = "Mike" AND lastName ="Fiers"), 
+(SELECT id FROM games WHERE id = "9"), 
+(select id from teams where abbreviation ="OAK"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","0.1","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = "Liam" AND lastName ="Hendriks"), 
+(SELECT id FROM games WHERE id = "9"), 
+(select id from teams where abbreviation ="OAK"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","1","1","1","0","0",
+(SELECT id FROM players WHERE firstName = "Joakim" AND lastName ="Soria"), 
+(SELECT id FROM games WHERE id = "9"), 
+(select id from teams where abbreviation ="OAK"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","0","0","0","1","0",
+(SELECT id FROM players WHERE firstName = "Lou" AND lastName ="Trivino"), 
+(SELECT id FROM games WHERE id = "9"), 
+(select id from teams where abbreviation ="OAK"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1.1","0","0","0","1","3",
+(SELECT id FROM players WHERE firstName = "Josh" AND lastName ="Hader"), 
+(SELECT id FROM games WHERE id = "10"), 
+(select id from teams where abbreviation ="MIL"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1.2","1","0","0","1","2",
+(SELECT id FROM players WHERE firstName = "Jeremy" AND lastName ="Jeffress"), 
+(SELECT id FROM games WHERE id = "10"), 
+(select id from teams where abbreviation ="MIL"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","6","4","1","1","0","9",
+(SELECT id FROM players WHERE firstName = "Freddy" AND lastName ="Peralta"), 
+(SELECT id FROM games WHERE id = "10"), 
+(select id from teams where abbreviation ="MIL"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1","0","0","0","0","2",
+(SELECT id FROM players WHERE firstName = "Austin" AND lastName ="Brice"), 
+(SELECT id FROM games WHERE id = "10"), 
+(select id from teams where abbreviation ="MIA"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1","3","1","1","0","0",
+(SELECT id FROM players WHERE firstName = "Tayron" AND lastName ="Guerrero"), 
+(SELECT id FROM games WHERE id = "10"), 
+(select id from teams where abbreviation ="MIA"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = "Sergio" AND lastName ="Romo"), 
+(SELECT id FROM games WHERE id = "10"), 
+(select id from teams where abbreviation ="MIA"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","5","6","4","4","2","2",
+(SELECT id FROM players WHERE firstName = "Caleb" AND lastName ="Smith"), 
+(SELECT id FROM games WHERE id = "10"), 
+(select id from teams where abbreviation ="MIA"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","8","5","5","5","3","7",
+(SELECT id FROM players WHERE firstName = "Trevor" AND lastName ="Bauer"), 
+(SELECT id FROM games WHERE id = "6"), 
+(select id from teams where abbreviation ="CLE"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","0.2","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = "Jon" AND lastName ="Edwards"), 
+(SELECT id FROM games WHERE id = "6"), 
+(select id from teams where abbreviation ="CLE"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","0.1","2","0","0","0","1",
+(SELECT id FROM players WHERE firstName = "Josh" AND lastName ="Smith"), 
+(SELECT id FROM games WHERE id = "6"), 
+(select id from teams where abbreviation ="CLE"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","6","6","3","3","3","3",
+(SELECT id FROM players WHERE firstName = "Shaun" AND lastName ="Anderson"), 
+(SELECT id FROM games WHERE id = "11"), 
+(select id from teams where abbreviation ="SF"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1","5","4","4","1","0",
+(SELECT id FROM players WHERE firstName = "Mark" AND lastName ="Melancon"), 
+(SELECT id FROM games WHERE id = "11"), 
+(select id from teams where abbreviation ="SF"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","0.1","2","0","0","0","0",
+(SELECT id FROM players WHERE firstName = "Reyes" AND lastName ="Moronta"), 
+(SELECT id FROM games WHERE id = "11"), 
+(select id from teams where abbreviation ="SF"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","0.2","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = "Tony" AND lastName ="Watson"), 
+(SELECT id FROM games WHERE id = "11"), 
+(select id from teams where abbreviation ="SF"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","3.1","6","6","2","2","3",
+(SELECT id FROM players WHERE firstName = "Edwin" AND lastName ="Jackson"), 
+(SELECT id FROM games WHERE id = "12"), 
+(select id from teams where abbreviation ="TOR"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1","1","0","0","1","2",
+(SELECT id FROM players WHERE firstName = "Elvis" AND lastName ="Luciano"), 
+(SELECT id FROM games WHERE id = "12"), 
+(select id from teams where abbreviation ="TOR"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1","0","0","0","0","1",
+(SELECT id FROM players WHERE firstName = "Tim" AND lastName ="Mayza"), 
+(SELECT id FROM games WHERE id = "12"), 
+(select id from teams where abbreviation ="TOR"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","3.2","1","0","0","1","1",
+(SELECT id FROM players WHERE firstName = "Thomas" AND lastName ="Pannone"), 
+(SELECT id FROM games WHERE id = "12"), 
+(select id from teams where abbreviation ="TOR"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","5","3","1","1","2","6",
+(SELECT id FROM players WHERE firstName = "Jaime" AND lastName ="Barria"), 
+(SELECT id FROM games WHERE id = "9"), 
+(select id from teams where abbreviation ="LAA"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","4","6","6","5","4","4",
+(SELECT id FROM players WHERE firstName = "Tyler" AND lastName ="Skaggs"), 
+(SELECT id FROM games WHERE id = "9"), 
+(select id from teams where abbreviation ="LAA"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","6","6","3","3","1","5",
+(SELECT id FROM players WHERE firstName = "Mike" AND lastName ="Foltynewicz"), 
+(SELECT id FROM games WHERE id = "1"), 
+(select id from teams where abbreviation ="ATL"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1","1","1","1","0","1",
+(SELECT id FROM players WHERE firstName = "Sean" AND lastName ="Newcomb"), 
+(SELECT id FROM games WHERE id = "1"), 
+(select id from teams where abbreviation ="ATL"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1","3","2","2","0","1",
+(SELECT id FROM players WHERE firstName = "Jacob" AND lastName ="Webb"), 
+(SELECT id FROM games WHERE id = "1"), 
+(select id from teams where abbreviation ="ATL"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","5","5","5","3","5","6",
+(SELECT id FROM players WHERE firstName = "Patrick" AND lastName ="Corbin"), 
+(SELECT id FROM games WHERE id = "13"), 
+(select id from teams where abbreviation ="WSH"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","0.2","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = "Matt" AND lastName ="Grace"), 
+(SELECT id FROM games WHERE id = "13"), 
+(select id from teams where abbreviation ="WSH"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1.2","1","0","0","1","2",
+(SELECT id FROM players WHERE firstName = "Javy" AND lastName ="Guerra"), 
+(SELECT id FROM games WHERE id = "13"), 
+(select id from teams where abbreviation ="WSH"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","0.2","0","0","0","1","1",
+(SELECT id FROM players WHERE firstName = "Tony" AND lastName ="Sipp"), 
+(SELECT id FROM games WHERE id = "13"), 
+(select id from teams where abbreviation ="WSH"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","2","0","0","0","3","4",
+(SELECT id FROM players WHERE firstName = "Chris" AND lastName ="Devenski"), 
+(SELECT id FROM games WHERE id = "8"), 
+(select id from teams where abbreviation ="HOU"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","0.1","3","1","1","0","0",
+(SELECT id FROM players WHERE firstName = "Will" AND lastName ="Harris"), 
+(SELECT id FROM games WHERE id = "8"), 
+(select id from teams where abbreviation ="HOU"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","2","0","0","0","3","4",
+(SELECT id FROM players WHERE firstName = "Josh" AND lastName ="James"), 
+(SELECT id FROM games WHERE id = "8"), 
+(select id from teams where abbreviation ="HOU"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1.2","1","1","1","1","0",
+(SELECT id FROM players WHERE firstName = "Roberto" AND lastName ="Osuna"), 
+(SELECT id FROM games WHERE id = "8"), 
+(select id from teams where abbreviation ="HOU"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","0.2","1","1","1","2","0",
+(SELECT id FROM players WHERE firstName = "Ryan" AND lastName ="Pressly"), 
+(SELECT id FROM games WHERE id = "8"), 
+(select id from teams where abbreviation ="HOU"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","1","1","1","0","1",
+(SELECT id FROM players WHERE firstName = "Hector" AND lastName ="Rondon"), 
+(SELECT id FROM games WHERE id = "8"), 
+(select id from teams where abbreviation ="HOU"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","6.1","5","3","3","0","7",
+(SELECT id FROM players WHERE firstName = "Justin" AND lastName ="Verlander"), 
+(SELECT id FROM games WHERE id = "8"), 
+(select id from teams where abbreviation ="HOU"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","0","0","0","0","2",
+(SELECT id FROM players WHERE firstName = "Jeurys" AND lastName ="Familia"), 
+(SELECT id FROM games WHERE id = "11"), 
+(select id from teams where abbreviation ="NYM"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","0","0","0","0","1",
+(SELECT id FROM players WHERE firstName = "Seth" AND lastName ="Lugo"), 
+(SELECT id FROM games WHERE id = "11"), 
+(select id from teams where abbreviation ="NYM"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","7","3","3","3","1","6",
+(SELECT id FROM players WHERE firstName = "Zack" AND lastName ="Wheeler"), 
+(SELECT id FROM games WHERE id = "11"), 
+(select id from teams where abbreviation ="NYM"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","5","6","1","1","1","7",
+(SELECT id FROM players WHERE firstName = "Anthony" AND lastName ="DeSclafani"), 
+(SELECT id FROM games WHERE id = "5"), 
+(select id from teams where abbreviation ="CIN"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1","1","0","0","0","1",
+(SELECT id FROM players WHERE firstName = "Amir" AND lastName ="Garrett"), 
+(SELECT id FROM games WHERE id = "5"), 
+(select id from teams where abbreviation ="CIN"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1.1","2","2","2","0","3",
+(SELECT id FROM players WHERE firstName = "Michael" AND lastName ="Lorenzen"), 
+(SELECT id FROM games WHERE id = "5"), 
+(select id from teams where abbreviation ="CIN"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","0.2","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = "Wandy" AND lastName ="Peralta"), 
+(SELECT id FROM games WHERE id = "5"), 
+(select id from teams where abbreviation ="CIN"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1","0","0","0","0","2",
+(SELECT id FROM players WHERE firstName = "Austin" AND lastName ="Adams" AND currentTeamId ="23"), 
+(SELECT id FROM games WHERE id = "7"), 
+(select id from teams where abbreviation ="DET"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","1.1","0","0","0","0","1",
+(SELECT id FROM players WHERE firstName = "Victor" AND lastName ="Alcantara"), 
+(SELECT id FROM games WHERE id = "7"), 
+(select id from teams where abbreviation ="DET"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","0.1","1","0","0","0","0",
+(SELECT id FROM players WHERE firstName = "Buck" AND lastName ="Farmer"), 
+(SELECT id FROM games WHERE id = "7"), 
+(select id from teams where abbreviation ="DET"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","5.2","11","3","3","1","6",
+(SELECT id FROM players WHERE firstName = "Daniel" AND lastName ="Norris"), 
+(SELECT id FROM games WHERE id = "7"), 
+(select id from teams where abbreviation ="DET"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","0.2","2","3","3","1","0",
+(SELECT id FROM players WHERE firstName = "Daniel" AND lastName ="Stumpf"), 
+(SELECT id FROM games WHERE id = "7"), 
+(select id from teams where abbreviation ="DET"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","2","0","0","0","1","3",
+(SELECT id FROM players WHERE firstName = "Miguel" AND lastName ="Castro"), 
+(SELECT id FROM games WHERE id = "2"), 
+(select id from teams where abbreviation ="BAL"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("N","6","8","4","3","1","2",
+(SELECT id FROM players WHERE firstName = "David" AND lastName ="Hess"), 
+(SELECT id FROM games WHERE id = "2"), 
+(select id from teams where abbreviation ="BAL"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = "Aroldis" AND lastName ="Chapman"), 
+(SELECT id FROM games WHERE id = "12"), 
+(select id from teams where abbreviation ="NYY"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","4","1","1","0","0",
+(SELECT id FROM players WHERE firstName = "Chad" AND lastName ="Green"), 
+(SELECT id FROM games WHERE id = "12"), 
+(select id from teams where abbreviation ="NYY"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","7","4","1","1","0","4",
+(SELECT id FROM players WHERE firstName = "J.A." AND lastName ="Happ"), 
+(SELECT id FROM games WHERE id = "12"), 
+(select id from teams where abbreviation ="NYY"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","5","4","4","4","3","5",
+(SELECT id FROM players WHERE firstName = "Joey" AND lastName ="Lucchesi"), 
+(SELECT id FROM games WHERE id = "13"), 
+(select id from teams where abbreviation ="SD"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","0","0","0","0","0",
+(SELECT id FROM players WHERE firstName = "Craig" AND lastName ="Stammen"), 
+(SELECT id FROM games WHERE id = "13"), 
+(select id from teams where abbreviation ="SD"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","0","0","0","0","2",
+(SELECT id FROM players WHERE firstName = "Trey" AND lastName ="Wingenter"), 
+(SELECT id FROM games WHERE id = "13"), 
+(select id from teams where abbreviation ="SD"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","0","0","0","0","3",
+(SELECT id FROM players WHERE firstName = "Matt" AND lastName ="Wisler"), 
+(SELECT id FROM games WHERE id = "13"), 
+(select id from teams where abbreviation ="SD"));
+
+INSERT INTO pitcherStats
+(wins, inningsPitched, runs, earnedRuns, hitsAllowed,walksAllowed,strikeoutsAllowed, playerId,gameId,teamId)
+VALUES
+("Y","1","0","0","0","0","1",
+(SELECT id FROM players WHERE firstName = "Kirby" AND lastName ="Yates"), 
+(SELECT id FROM games WHERE id = "13"), 
+(select id from teams where abbreviation ="SD"));
+
