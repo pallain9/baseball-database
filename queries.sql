@@ -27,7 +27,7 @@ SELECT CONCAT (firstName, ' ', lastName) AS FullName, position, t.abbreviation, 
  JOIN teams t
  ON p.currentTeamId =t.id
  JOIN games g
- ON h.gameId = g.id WHERE startTime >= "2019-06-06 00:00:00" AND startTime <= "2019-06-06 17:00:00"
+ ON h.gameId = g.id WHERE startTime >= "2019-06-06 00:00:00" AND startTime <= "2019-06-06 23:59:59"
  ORDER BY h.homeRuns DESC LIMIT 5;
  
 SELECT CONCAT (firstName, ' ', lastName) AS FullName, position, t.abbreviation, AVG (earnedRuns*9/inningsPitched) AS ERA
@@ -37,8 +37,8 @@ SELECT CONCAT (firstName, ' ', lastName) AS FullName, position, t.abbreviation, 
  JOIN teams t
  ON p.currentTeamId =t.id 
  JOIN games g
- ON s.gameId = g.id WHERE startTime >= "2019-06-06 00:00:00" AND startTime <= "2019-06-06 23:59:59" AND inningsPitched >= 4
- Group BY p.id ORDER BY ERA ASC LIMIT 5;   
+ ON s.gameId = g.id WHERE startTime LIKE "2019-06-06%" AND inningsPitched >= 4
+ GROUP BY p.id ORDER BY ERA ASC LIMIT 5;   
  
  SELECT CONCAT (firstName, ' ', lastName) AS FullName, position, t.abbreviation, doubles, g.startTime, (SELECT abbreviation FROM teams WHERE homeTeamId = teams.id) AS HomeTeam, (SELECT abbreviation FROM teams WHERE awayTeamId = teams.id) AS AwayTeam
  FROM hitterStats h
@@ -47,7 +47,7 @@ SELECT CONCAT (firstName, ' ', lastName) AS FullName, position, t.abbreviation, 
  JOIN teams t
  ON p.currentTeamId =t.id
  JOIN  games g
- ON h.gameId = g.id WHERE startTime >= "2019-06-06 00:00:00" AND startTime <= "2019-06-06 23:59:59"
+ ON h.gameId = g.id WHERE startTime LIKE "2019-06-06%"
  ORDER BY h.doubles DESC LIMIT 1;
  
  

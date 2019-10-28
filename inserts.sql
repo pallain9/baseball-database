@@ -2089,9 +2089,9 @@ INSERT INTO hitterStats
 (atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
 VALUES
 ("4","0","0","0","0","0","0","0","0","0",
-(SELECT id FROM players WHERE firstName ='Starling' AND lastName ='Marte'), 
-(SELECT id FROM games WHERE id = '1'), 
-(select id from teams where abbreviation ='PIT'));
+(SELECT id FROM players WHERE firstName ='fn' AND lastName ='ln'), 
+(SELECT id FROM games WHERE id = '0'), 
+(select id from teams where abbreviation ='aaa'));
 
 INSERT INTO hitterStats
 (atBats, runs, hits, doubles, triples, homeRuns, runsBattedIn, walks, strikeouts, steals, playerId, gameId, teamId)
@@ -4879,4 +4879,5 @@ VALUES
 (SELECT id FROM players WHERE firstName = "Kirby" AND lastName ="Yates"), 
 (SELECT id FROM games WHERE id = "13"), 
 (select id from teams where abbreviation ="SD"));
+
 
